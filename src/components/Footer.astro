@@ -1,0 +1,20 @@
+---
+import { persona } from "../persona";
+import Link from "./Link.astro";
+---
+
+<footer>
+  <h3 class="text-l/primary dark:text-d/primary">Reach out</h3>
+  <p class="text-sm text-l/tertiary dark:text-d/tertiary">
+    drop me a line: 
+    <Link target="_self" title={persona.email} url={`mailto:${persona.email}`} />
+    </p>
+  <p class="w-full">
+    {
+      persona.contacts.map((c) => (
+      <span class="text-l/tertiary dark:text-d/tertiary after:content-[',_'] last:after:content-none"><Link target="_blank" title={c.title} url={c.url} /></span>
+      ))
+    }
+  </p>
+  
+</footer>

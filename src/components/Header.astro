@@ -1,0 +1,15 @@
+---
+interface Props {
+    title: string;
+    description: string;
+    email: string
+}
+
+const { title, description, email } = Astro.props
+---
+
+<header>
+    <h1 class="text-base text-l/primary dark:text-d/primary">{title}</h1>
+    <p class="text-sm text-l/tertiary dark:text-d/tertiary">{description}</p>
+  
+</header>

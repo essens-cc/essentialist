@@ -1,0 +1,44 @@
+---
+interface Props {
+  title: string;
+  desc: string;
+}
+
+const { title, desc } = Astro.props;
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={desc} />
+
+    {/* Open Graph Facebook  */}
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={desc} />
+
+    {/* Twitter */}
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={desc} />
+    <title>{title}</title>
+  </head>
+  <body class="bg-l/bg dark:bg-d/bg antialiased w-full h-full p-4 md:p-0">
+    <div
+      class="w-full m-auto max-w-xl min-h-screen flex flex-col justify-center items-start gap-8"
+    >
+      <!-- <Navigation /> -->
+      <main class="space-y-4">
+        <slot />
+      </main>
+      <Footer />
+    </div>
+  </body>
+</html>

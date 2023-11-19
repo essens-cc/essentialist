@@ -1,0 +1,9 @@
+---
+import { nav } from "../nav";
+import Link from "./Link.astro";
+---
+<nav class="w-full flex justify-start gap-2">
+    {nav.map((n) => (
+        <Link target="_self" title={n.title} url={n.url} />
+    ))}
+</nav>

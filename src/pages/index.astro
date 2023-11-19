@@ -1,0 +1,36 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Story from "../components/Story.astro";
+import SectionTitle from "../components/SectionTitle.astro";
+import { persona } from "../persona";
+import List from "../components/List.astro";
+import ListItem from "../components/ListItem.astro";
+import Section from "../components/Section.astro";
+const fullName = persona.firstName + " " + persona.secondName;
+---
+
+<Layout title={fullName} desc={persona.description}>
+  <Header title={fullName} description={persona.description} email={persona.email} />
+  <Story story={persona.story} />
+  <Section>
+    <SectionTitle title="Books" />
+    <List>
+      {
+        persona.sections.books.map((e) => (
+          <ListItem title={e.title} desc={e.desc} url={e.url} />
+        ))
+      }
+    </List>
+  </Section>
+  <Section>
+    <SectionTitle title="Experience" />
+    <List>
+      {
+        persona.sections.experience.map((e) => (
+          <ListItem title={e.title} desc={e.desc} url={e.url} />
+        ))
+      }
+    </List>
+  </Section>
+</Layout>

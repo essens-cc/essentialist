@@ -1,0 +1,33 @@
+---
+interface Props {
+  title: string;
+  desc: string;
+  url?: string;
+}
+
+const { title, desc, url } = Astro.props;
+---
+
+<p class="w-full flex justify-start items-start text-base">
+  {
+    url ? (
+      <a href={url} target="_blank" class="group focus-visible:bg-l/primary dark:focus-visible:bg-d/primary focus-visible:text-l/primary dark:focus-visible:text-d/primary outline-none focus-visible:after:text-l/primary dark:focus-visible:after:text-d/primary 
+      hover:bg-l/primary dark:hover:bg-d/primary hover:text-l/primary dark:hover:text-d/primary hover:after:text-l/primary dark:hover:after:text-d/primary">
+        <span class=
+        "text-l/secondary dark:text-d/secondary group-focus-visible:text-d/primary dark:group-focus-visible:text-l/primary
+        group-hover:text-d/primary dark:group-hover:text-l/primary">{title}</span>
+        <span class="text-l/tertiary dark:text-d/tertiary"> — </span>
+        <span class=
+        "text-l/tertiary dark:text-d/tertiary">{desc}</span>
+      </a>
+    ) : (
+      <>  
+        <span class=
+        "text-l/secondary dark:text-d/secondary focus">{title}</span>
+        <span class="text-l/tertiary dark:text-d/tertiary"> — </span>
+        <span class=
+        "text-l/tertiary dark:text-d/tertiary">{desc}</span>
+      </>
+    )
+  }
+</p>
