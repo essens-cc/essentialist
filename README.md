@@ -1,6 +1,6 @@
 # The Essentialist Template
 
-Hey! Thank you for your interest in my work. Feel free to experiment with this template and to make it your own. 
+Hey! Thank you for your interest in my work. Feel free to experiment with this template and to make it your own. View the [demo](https://essentialist-nine.vercel.app/).
 
 The goal and the idea was to made as flexible template as possible so that anyone could use it to create a stylish hq on the internet. I wanted it to become a noise-cancelling anchor for someone focused on building a high-signal and meaningful life. 
 
