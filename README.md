@@ -6,6 +6,11 @@ The goal and the idea was to made as flexible template as possible so that anyon
 
 For those interested, the "spirited man" — comes from the "[Shop Class as Soulcraft](https://www.amazon.com/Shop-Class-Soulcraft-Inquiry-Value/dp/0143117467?keywords=soulcraft&qid=1700379052&sr=8-3)" book. 
 
+## Scores and Performance
+- [A+ DigitalBeacon Score](https://digitalbeacon.co/report/essentialist-nine-vercel-app);
+- [A+ 100% WebsiteCarbon Calculator](https://www.websitecarbon.com/website/essentialist-nine-vercel-app/);
+- [100 PErformance Page Speed Test](https://pagespeed.web.dev/analysis/https-essentialist-nine-vercel-app/ptsmccsqfy?form_factor=desktop);
+
 This template is created with [Astro](https://astro.build/) and [Tailwind](https://tailwindcss.com/).
 
 ![Essentialist: both themes](/public/two-themes.webp)
